@@ -1,0 +1,131 @@
+
+New Vue Instance
+----------------------------------------------
+
+new Vue
+
+-> A vue instance is the core of each application
+-> These instances have 1 major job -- control the HTML code which they render to the screen
+
+
+v-on 
+----------------------------------------------
+
+-> this is a directive
+-> basically a command
+-> it tells Vue to listen to a specific event
+
+
+<input type="text" v-on:input=""/>
+
+^ we want to listen to the "input" event, which is fired on every keystroke
+
+
+this
+----------------------------------------------
+
+-proxies all data properities like "title" to the top Vue object
+-which is why we can access things by using "this." as opposed to "this.data"
+
+
+  new Vue({
+    /* can take a string as a value, have control of div with id "app" */
+    el: "#app",
+    /* Store all the data we want in this object */
+    data: {
+      title: "Hello World!"
+    },
+    methods: {
+      changeTitle(evt) {
+        this.title = evt.target.value;
+      }
+    }
+  });
+
+-> evt => Vanilla JS allows you to see the value of the input
+-> how the DOM works; event object
+-> the target of the evt is the input 
+
+
+Interpolation or String Interpolation
+----------------------------------------------
+
+{{ }} => this syntax is called "interpolation" or "string interpolation"
+
+Vue instance & HTML code -> by instantiating this instance, create a connection between code in the DOM -> VueJS doesn't at runtime
+
+No hidden hint that there's some magic going on
+
+Vuejs creates a template based on our HTML code, stores that internally and then uses this template to create the REAL HTML code as the DOM
+
+-this allows us to use template syntax
+
+-Layer in the middle is the Vue JS instance
+-outputs the final HTML code
+
+-this is really important to understand
+
+
+Interacting with the DOM
+----------------------------------------------
+
+-data stored in the Vue instance can be outputted in the template just like that
+
+-don't need "data.title", etc.
+
+-makes outputting things very easy -> all of this happens for us
+
+-without "this" in the template
+
+<div id="app">
+  <p>{{ sayHello() }}</p>
+</div>
+
+new Vue({
+  el: "#app",
+  data: {
+    title: "Hello World!"
+  },
+  methods: {
+    sayHello () {
+      return this.title; 
+    }
+  }
+})
+
+
+Binding to Attributes
+----------------------------------------------
+
+<div id="app">
+  <p>{{ sayHello() }} - <a href="">Google</a></p>
+</div>
+
+
+new Vue({
+  el: "#app",
+  data: {
+    title: "Hello World!",
+    link: "http://google.com"
+  },
+  methods: {
+    sayHello: function() {
+      return this.title; 
+    }
+  }
+})
+
+
+LINKS
+----------------------------------------------
+
+<a v-bind:href="link">Google</a> or 
+
+<a :href="link">Google</a>
+
+
+WE CAN'T use CURLY BRACES IN ANY HTML ELEMENT Attributes
+
+
+
+

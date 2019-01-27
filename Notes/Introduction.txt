@@ -1,0 +1,58 @@
+Why should we use something like Vue.js?
+----------------------------------------------
+
+-Vue.js allows you to build small widgets driven with light JS, medium sized projects, all the way to building enterprise level applications
+
+
+Why Javascript?
+----------------------------------------------
+
+-Javascript runs in the browser, don't have to worry about hitting a server
+
+
+Vue.js over React or Angular?
+----------------------------------------------
+
+-Vue.js is extremely lean & small
+-16KB minified and gzipped for the core framework
+-^ this is without the router
+-not only small and fast loading time, it's fast at load time
+-depends on specific application, but extremely fast at runtime
+
+-Vue is very feature-rich
+
+
+Vue.js Installation via CDN
+----------------------------------------------
+
+-CDN version of Vue is great for showcasing things in JSFiddle
+
+
+About this Course
+----------------------------------------------
+1. Getting Started
+2. Interacting with the DOM (templates)
+3. Understanding the VueJS Instance
+4. Vue CLI, provides us with some easy to start templates
+5. Components, a key concept of VueJS, build up application from components
+6. Forms, handling user inputs, how can we create 
+7. Directives, Filters, and Mixins
+8. Animations & Transitions
+9. Working with HTTP
+10. Routing 
+11. State Management 
+12. Deploying a VueJS App
+
+
+Projects, Exercises, Code, and Questions
+----------------------------------------------
+
+1. Basics, Template Interaction
+2. Components
+3. Animations
+4. Final Project (incl. Routing, State Management)
+
+-> practicing the different concepts that we learned
+
+
+Quick Exercises to practice the concepts learned
